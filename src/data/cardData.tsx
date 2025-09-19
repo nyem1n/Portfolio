@@ -1,4 +1,4 @@
-import { SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiGithub, SiFigma, SiNotion } from "react-icons/si";
+import { SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiHtml5, SiCss3, SiGithub, SiFigma, SiNotion, SiPostman } from "react-icons/si";
 import { FaTools, FaGithub } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
 
@@ -19,6 +19,7 @@ export const cardData = {
       { icon: <SiGithub size={36} />, text: "Git & GitHub" },
       { icon: <SiFigma size={36} />, text: "Figma" },
       { icon: <SiNotion size={36} />, text: "Notion" },
+      { icon: <SiPostman size={36} />, text: "Postman" },
     ],
   },
   education: {

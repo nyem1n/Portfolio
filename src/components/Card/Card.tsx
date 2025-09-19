@@ -32,7 +32,7 @@ function Card({ title, items }: CardProps) {
                 {item.text}
               </a>
             ) : (
-              <p className="font-semibold">{item.text}</p>
+              <p className="font-bold">{item.text}</p>
             )}
 
             {item.description && (
