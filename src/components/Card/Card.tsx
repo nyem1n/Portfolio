@@ -2,7 +2,7 @@ interface CardItem {
   icon?: React.ReactNode;
   text: string;
   description?: string;
-  link?: string; 
+  link?: string;
 }
 
 interface CardProps {
@@ -13,7 +13,6 @@ interface CardProps {
 function Card({ title, items }: CardProps) {
   return (
     <div className="bg-white p-6 md:p-16 rounded-[20px] shadow-md w-[400px] flex flex-col items-center">
-      {/* h2도 flex 없이 그냥 text-center */}
       <h2 className="text-3xl md:text-4xl mb-8 md:mb-12 text-center text-[#4178a8]">
         {title}
       </h2>
@@ -37,7 +36,9 @@ function Card({ title, items }: CardProps) {
             )}
 
             {item.description && (
-              <p className="text-xs md:text-sm text-gray-500">{item.description}</p>
+              <p className="text-xs md:text-sm text-gray-500">
+                {item.description}
+              </p>
             )}
           </li>
         ))}
