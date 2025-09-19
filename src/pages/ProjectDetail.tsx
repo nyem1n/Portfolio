@@ -6,7 +6,7 @@ const ProjectDetail = () => {
   const { projectName } = useParams();
 
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
 
   const project = projectData.find(
@@ -18,8 +18,10 @@ const ProjectDetail = () => {
   }
   return (
     <div className="p-10 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-2">{project.title}</h1>
-      <p className="text-lg text-gray-600 mb-6">{project.type}</p>
+      <h1 className="text-4xl font-bold mb-2 text-[#4178a8]">
+        {project.title}
+      </h1>
+      <p className="text-lg text-gray-600 mb-6 font-semibold">{project.type}</p>
 
       <img
         src={project.image}
@@ -27,8 +29,17 @@ const ProjectDetail = () => {
         className="w-full max-h-96 object-contain rounded-lg shadow-md mb-8"
       />
 
+      {project.purpose && (
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-2">프로젝트 목적</h2>
+          <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+            {project.purpose}
+          </p>
+        </section>
+      )}
+
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">프로젝트 설명</h2>
+        <h2 className="text-2xl font-bold mb-2">프로젝트 설명</h2>
         <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
           {project.detail}
         </p>
@@ -36,14 +47,14 @@ const ProjectDetail = () => {
 
       {project.date && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">진행 기간</h2>
+          <h2 className="text-2xl font-bold mb-2">진행 기간</h2>
           <p className="text-gray-700 whitespace-pre-wrap">{project.date}</p>
         </section>
       )}
 
       {project.role && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">맡은 역할</h2>
+          <h2 className="text-2xl font-bold mb-2">맡은 역할</h2>
           <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
             {project.role}
           </p>
@@ -52,7 +63,7 @@ const ProjectDetail = () => {
 
       {project.teamSize && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">프로젝트 인원</h2>
+          <h2 className="text-2xl font-bold mb-2">프로젝트 인원</h2>
           <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
             {project.teamSize}
           </p>
@@ -60,7 +71,7 @@ const ProjectDetail = () => {
       )}
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">사용한 기술 스택</h2>
+        <h2 className="text-2xl font-bold mb-2">사용한 기술 스택</h2>
         <div className="flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => (
             <span
@@ -75,7 +86,7 @@ const ProjectDetail = () => {
 
       {project.learnings && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">배운 점</h2>
+          <h2 className="text-2xl font-bold mb-2">배운 점</h2>
           <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
             {project.learnings}
           </p>
@@ -84,18 +95,9 @@ const ProjectDetail = () => {
 
       {project.insights && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">아쉬운 점 & 인사이트</h2>
+          <h2 className="text-2xl font-bold mb-2">아쉬운 점</h2>
           <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
             {project.insights}
-          </p>
-        </section>
-      )}
-
-      {project.purpose && (
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">프로젝트 목적</h2>
-          <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-            {project.purpose}
           </p>
         </section>
       )}
@@ -125,7 +127,7 @@ const ProjectDetail = () => {
 
       {project.screenshots && project.screenshots.length > 0 && (
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">프로젝트 화면</h2>
+          <h2 className="text-2xl font-bold mb-2">프로젝트 화면</h2>
           <div className="flex flex-col gap-4">
             {project.screenshots.map((shot, idx) => (
               <img

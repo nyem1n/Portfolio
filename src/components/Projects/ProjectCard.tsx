@@ -25,7 +25,7 @@ function ProjectCard({
   return (
 <div
   className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer
-             flex flex-col w-full sm:w-[300px] md:w-[350px] lg:w-[380px] xl:w-[400px]"
+              flex flex-col w-full sm:w-[300px] md:w-[350px] lg:w-[380px] xl:w-[400px]"
   onClick={handleCardClick}
 >
   <div className="w-full h-[180px] bg-gray-200 flex items-center justify-center">
@@ -34,13 +34,13 @@ function ProjectCard({
 
   <div className="p-4">
     <div className="flex justify-between items-center mb-2">
-      <h3 className="text-xl font-bold">{title}</h3>
+      <h3 className="text-xl font-bold ">{title}</h3>
       <span className="text-sm text-gray-500">{type}</span>
     </div>
 
     <p className="text-sm text-gray-700 mb-4">{description}</p>
 
-    <div className="flex flex-wrap gap-2 text-sm text-gray-500">
+    <div className="flex flex-wrap gap-2 text-sm  text-[#4178a8]">
       {techStack.map((tech, index) => (
         <span key={index}>{tech}</span>
       ))}
